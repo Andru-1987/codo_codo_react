@@ -1,0 +1,123 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background: url("https://images.unsplash.com/photo-1625225230517-7426c1be750c");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container{
+    height: 70%;
+    width: 95vw;
+    font-family: 'Poiret One', cursive;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+.card-cv{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.data_text{
+    background-color: hsla(110, 10%, 64%, 0.1);
+    height: 50vh;
+    width: auto;
+    margin: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2em;
+    border-radius: 3em;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.data_text > p {
+    font-size:  clamp(1.2rem , 1.5vw, 2rem);
+    text-align: center;
+}
+
+.data_text > h1{
+    font-size: 3rem;
+    padding: 0;
+    margin: 0;
+}
+
+
+.btn{
+    height: 4vw;
+    width: 40%;
+    border-radius: 1rem;
+    border: none;
+    background-color:hsla(200, 60%, 20%, 0.5) ;
+    cursor: pointer;
+    font-size: clamp(0.8rem , 1.5vw,2em);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.card_image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pic{
+    
+    height: 17rem;
+    width: 17rem;
+    
+    background-image: url("../assets/pic.jpeg");
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    border-radius: 50%;
+}
+
+
+.circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+
+    border-radius: 50%;
+
+}
+
+.circle::before{
+    position: absolute;
+    content:'';
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255,255,255,0.3);
+    animation: spinner 3s linear infinite;
+}
+
+
+@keyframes spinner {    
+    0%{
+        transform: rotate(0deg);
+        box-shadow: 1px 2px 2px #0456c8;
+    }
+    50%{
+        transform: rotate(180deg);
+        box-shadow: 1px 2px 2px #18b201;
+    }
+    100%{
+        transform: rotate(360deg);
+        box-shadow: 1px 2px 2px #e65c00;
+    }
+}
